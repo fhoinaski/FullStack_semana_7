@@ -32,7 +32,7 @@ export const Tabela = ({ negociacoes }) => {
 
                 <tfoot>
                     <tr>
-                        <td colSpan="3"></td>
+                    <td colSpan="3"></td>
                         <td>
                             {/* Exibe a soma total formatada como moeda brasileira */}
                             {somaTotal.toLocaleString("pt-BR", {
