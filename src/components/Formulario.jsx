@@ -1,7 +1,7 @@
 import { Botao } from "./Botao";
 import { GrupoInput } from "./GrupoInput";
 import { useState } from "react";
-import PropTypes from 'prop-types';
+import moment from "moment";
 
 export const Formulario = ({ quandoAdicionar }) => {
     const [data, setData] = useState("");
@@ -20,7 +20,7 @@ export const Formulario = ({ quandoAdicionar }) => {
       event.preventDefault();
       if (validarDados()) {
         const negociacao = {
-          data: data,
+          data: moment(data).format("DD/MM/YYYY"),// formatar data
           quantidade: quantidade,
           valor: valor,
         };
